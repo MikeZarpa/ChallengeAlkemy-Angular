@@ -14,6 +14,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import{MatProgressSpinnerModule} from '@angular/material/progress-spinner'
     AppRoutingModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

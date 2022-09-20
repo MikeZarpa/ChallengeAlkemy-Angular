@@ -12,6 +12,8 @@ import { BuscadorPlatosComponent } from './components/buscador-platos/buscador-p
 
 import {ReactiveFormsModule} from '@angular/forms';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import{MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

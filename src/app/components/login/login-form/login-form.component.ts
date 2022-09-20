@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginFormComponent implements OnInit {
 
   formularioLogin: FormGroup;
+  status = {error:false,procesando:false}
 
   constructor(_builder:FormBuilder, private authService:AuthService) {
     this.formularioLogin = _builder.group({
@@ -19,7 +20,9 @@ export class LoginFormComponent implements OnInit {
    }
    
    iniciarSesion(text:string){
-     this.authService.onLogin();
+    this.status.error = false;
+    this.status.procesando = true;
+     this.authService.onLogin(text).then(()=>{alert("Redireccionando")}).catch(()=>{this.status.error=true;this.status.procesando=false});
    }
 
   ngOnInit(): void {
